@@ -4,12 +4,134 @@
     <meta charset="UTF-8"> <!-- Define la codificacion de caracteres de mi pagina Web, el estandar de facto para paginas web es UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Nos sirve para paginas web responsivas, es decir la pagina web se adapta al tamaño de varios dispositivos-->
     <title>Mi Primera Pagina Web</title><!--Titulo-->
+    <style>
+        .spelling-error {
+          text-decoration-line: underline;
+          text-decoration-style: wavy;
+          text-decoration-color: red;
+        }
+        </style>
+
 </head>
+
+
 <body><!-- El elemento body en html corresponde al elemento visual de la pagina web, todo lo que es visulizado en pantalla esta declarado en este apartado-->
-    <h1>Mi Primera Pagina Web</h1>
-    <h3>Carrera de Ingenieria en Computación</h3>
-    <h6>Andres Cueva</h6>
-    <p>Este es el primer parrafo de mi Página Web</p>
-    <button>Aceptar</button>
+    
+    <header>
+        <h1>Universidad Central del Ecuador</h1>
+        <h3>Carrera de Ingenieria en Computación</h3>
+    </header>
+    <nav></nav>
+    <section>
+        <h1>Mi Primera Pagina Web</h1>
+        <h6>Andres Cueva</h6>
+
+        <!--Elementos para parrafos-->
+        <p>Este es el primer parrafo de mi Página Web ..........</p>
+        <span>Parrafos mas cortos</span>
+        <!--El elemento p son para parrafos mas grandes-->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, commodi aliquam eos similique deleniti odit consectetur dignissimos eligendi atque ipsam nulla fugit doloremque consequuntur reiciendis molestias rerum esse a velit.</p>
+
+        <!--Textos-->
+        <!--Strong me permite resaltar un texto-->
+        <strong>Texto de importancia</strong>
+        <b>Textos que no quiero dar relevancia</b>
+        <br>
+        <em>Textos en cursiva</em>
+        <i>Texto en curisva pero sin importancia</i>
+        <br>
+        <u class="spelling-error">Texto subrayado</u>
+        <s>Texto elimnado</s>
+        <mark>Texto Resaltado</mark>
+        <br>
+        <hr>
+
+        <!--Listas-->
+        <!--Las listas me permiten crear los menus en mis paginas-->
+        <!--Lista sin Orden-->
+        <ul>
+            <li>Ventas</li>
+            <li>Compras</li>
+            <li>Inventario</li>
+        </ul>
+        <!--Lista Ordenada-->
+        <ol>
+            <li>Ventas</li>
+            <li>Compras</li>
+            <li>Inventario</li>
+        </ol>
+
+        <!--Tablas-->
+        <table border="1">
+            <thead>
+                <!--tr siempre es primero y representa una fila, primero se contruye tanto en la cabecera como el cuerpo-->
+                <tr>
+                    <!--Como contenido de la fila declaro todas las columnas-->
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>CI</th>
+                    <th>Genero</th>
+                    <th>Accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!--Para la columna ya no declaro un th si no que un elemento td-->
+                    <td>1</td>
+                    <td>Andres</td>
+                    <td>Cueva</td>
+                    <td>1752086981</td>
+                    <td>Masculino</td>
+                    <td><button>Editar</button></td>
+                </tr>
+                <!--Por cada fila es un elemento html tr-->
+                <tr>
+                    <!--Para la columna ya no declaro un th si no que un elemento td-->
+                    <td>2</td>
+                    <td>Rein</td>
+                    <td>Rin</td>
+                    <td>1752086981</td>
+                    <td>Femenino</td>
+                    <td><button>Editar</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--Contenedores-->
+        <div></div>
+
+        <!--Formularios-->
+        <form action="">
+            <label for="id_nombre">Nombre</label>
+            <input type="text" id="id_nombre">
+            <label for="id_password">Password</label>
+            <input type="password" id="id_password">
+            <label for="id_fecha">Fecha de nacimiento</label>
+            <input type="date" id="id_fecha">
+            <label for="id_edad">Edad</label>
+            <input type="number" id="id_edad">
+            <button>Guardar</button>
+        </form>
+
+        <!--Multimedia-->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/800px-React-icon.svg.png
+        " alt="No fue posible cargar la imagen" width="130" height="100">
+
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+
+        <br>
+
+        <button>Aceptar</button>
+    </section>
+    <aside></aside>
+    <footer>
+        <h3>Todos los derechos reservados</h3>
+        Av. Universitaria
+    </footer>
+
 </body>
+
 </html>
