@@ -1,0 +1,25 @@
+h1{
+    color: black;
+    background-color: yellow;
+    font-size: 24px;
+    text-align: center;
+}
+h2 {
+    color: rgb(59, 130, 158);
+    background:  #ff5733 ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border-bottom: solid rgb(210, 201, 75) 2px;
+}
+h3 {
+    color: rgb(127, 165, 86);
+    background:  #9633ff ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p {
+    color: rgb(38, 102, 30);
+    background:  #9633ff ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
