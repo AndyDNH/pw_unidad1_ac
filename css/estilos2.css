@@ -1,0 +1,69 @@
+/* universal, todos los elementos html */
+
+* {
+    color: blue;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+/* por tipo de elemento HTML */
+h4 {
+    background-color: red;
+    font-size: 40px;
+    
+}
+h5 {
+    background: rgb(106, 144, 194);
+    font-size: 10px;
+
+}
+/* por clase */
+
+.grupo1 {
+    background-color: yellow;
+    border: black solid 2px;
+}
+
+/* por identificador */
+
+#id_boton1 {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    border: solid 2px red
+}
+
+/* por atributo y filtrado por button button[id]*/ 
+[id] {
+    font-size: 50px;
+    border: solid 2px yellow;
+    border-radius: 20px;
+}
+
+/* Por contenido */
+img[alt="texto1"] {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/* aplica para todos aquellos que tengan el atributo src y contengan .jpg */
+img[src*=".jpg"] {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/* pseudo Clase(eventos) */
+
+i:hover {
+    color: darkblue;
+    font-size: 70px;
+}
+
+input:focus {
+    border-color: blueviolet;
+    background: red;
+}
