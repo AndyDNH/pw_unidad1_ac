@@ -147,3 +147,198 @@ console.log('Fundamentos JS')
     console.table(arregloEstudiantes);
 
 }
+const fundamentosJS = (num1,num2) =>{
+// const fundamentosJS(){
+    const ciudadano = {
+        nombre : 'Andres',
+        apellido : 'Cueva',
+        direccion : {
+            callePrincipal : 'Av. America',
+            calleSecundaria : 'Av. La Gasca',
+            numeracion : '5620',
+            barrio : {
+                referencia : 'Frente al Dilipa'
+            }
+        }
+    }
+    console.log(ciudadano);
+    console.log(ciudadano.nombre);
+    console.log(ciudadano.direccion);
+    console.log(ciudadano.direccion.callePrincipal);
+    console.log(ciudadano.direccion.barrio);
+    ciudadano.direccion.callePrincipal = 'Av. Amazonas';
+    console.log(ciudadano);
+
+    const est1 = {
+        nombre : 'Andres',
+    }
+
+    const est2 = {
+        nombre : 'Paul',
+    }
+
+    const arregloEstudiantes = [est1,est2];
+    console.log(arregloEstudiantes);
+
+
+    // otra forma de declarar un arreglo
+    const arregloEstudiantes2 = [{nombre: 'Carla', apellido :'Casillo' },{nombre: 'Diana', apellido :'Teran' }];
+    console.log(arregloEstudiantes2);
+    
+    // forma de imprimir un elemento del arreglo acompañado de . para acceder a un atributo de la misma
+    // util cuando no voy a hacer cambios a los elementos del arreglo
+    console.log(arregloEstudiantes2[1].apellido);
+
+    // Desestructuracion de Arreglos
+    // una manera mas sencilla de acceder a ellos es atraves de una referencia directa 
+    const colores = ['Amarillo', 'Azul', 'Rojo', 'Verde', 'Naranja']
+    // Declaro un alias a cada posicion de mi arreglo
+    const [c1,c2,c3,c4,c5] = colores;
+
+    console.log(c1);
+    console.log(c5);
+
+    const [col1,col2] = colores;
+    console.log(col1);
+    console.log(col2);
+
+    const [,,ctres] = colores;
+
+    console.log(ctres);
+
+    // puedo desestructura de forma directa
+    const [c01,c02] = ['Amarillo', 'Azul', 'Rojo', 'Verde', 'Naranja'];
+
+    console.log(c01,c02);
+
+    desestructuracionArray(colores);
+
+    const [,p2,p3,p4,p5,p6,p7,p8,p9,p10] = desestructuracionArray2();
+    console.log(p2);
+    console.log(p10);
+
+    // como conclusion la desestructuracion de objetos se realiza a traves de sus pocisiones
+    
+    // DESESTRUCTURACION POR OPERADOR RES
+    // EN CIERTOS ESCENARIOS QUIERO DESESTRUCTURAR UNA PARTE Y EL RESTO QUIERO QUE SE ANTENGA IGUAL
+
+    console.log('Desestructuracion por operador Rest')
+    const[p1,...resto]=desestructuracionArray2();
+    console.log(p1);
+    console.log(resto);
+
+
+
+    // DESESTRUCTURACION DE OBJETOS
+
+    const auto = {
+        marca: 'Toyota',
+        modelo: 'Prius',
+        anio: 2020,
+        color: 'Amarillo'
+    }
+
+    // elcriterio de desestructuracion son los nombres del atributo
+    const {marca,color,anio} =  auto;
+    console.log(color);
+
+    const {anio1,} = {
+        marca1: 'Toyota',
+        modelo1: 'Prius',
+        anio1: 2020,
+        color1: 'Amarillo'
+    }
+
+    console.log(anio1);
+
+    desestructuracionObjeto(auto);
+
+
+    // objeto con atributo de tipo objeto
+    const universidad = {
+        nombre: 'UCE',
+        direccion: 'America',
+        rector: {
+            nombreR: 'Alfoso',
+            apellidoR: 'Espinoza'
+        }
+    }
+
+    // la desestructruracion no se guia por porsicion pero por nombre del atributo
+    const {nombre,direccion,rector} =  universidad;
+    const {nombreR,apellidoR} = rector
+    console.log(nombreR)
+    console.log(apellidoR)
+
+    // se puede realizar la desestructuracoin de objetos dentro de objetos en una sola linea
+
+    const universidad2 = {
+        nombre2: 'UCE',
+        direccion2: 'America',
+        rector2: {
+            nombreR2: 'Ericksson',
+            apellidoR2: 'Almeida'
+        }
+    }
+
+    const {nombre2,rector2 :{nombreR2,apellidoR2}} = universidad2;
+    console.log(nombreR2);
+    console.log(apellidoR2);
+
+    
+    // DESESTRUCTURACION POR OPERADOR REST PARA OBJETOS
+    
+    const autoR = {
+        marcaR: 'Toyota',
+        modeloR: 'Prius',
+        anioR: 2020,
+        colorR: 'Amarillo'
+    }
+
+
+    console.log('Desestructuracion por operador Rest Objetos')
+
+    const{marcaR,...restoO}=autoR;
+    console.log(marcaR);
+    console.log(restoO);
+
+
+
+
+
+}
+
+
+// se puede desestructuran en cualquier parte del codigo un arreglo
+// yo a cualquier variable que sea un arreglo la puedo desestructuracionArray, sea como retorno de un objeto, como un argumento
+function desestructuracionArray([c1,c2,c3]){
+    console.log(c1);
+    console.log(c2);
+    console.log(c3);
+
+}
+
+function desestructuracionArray2(){
+    const colores = ['Rosado', 'Celeste', 'Carmin', 'Verde', 'Naranja']
+    return colores;
+
+}
+
+function desestructuracionObjeto({marca,color}){
+    console.log(marca);
+    console.log(color);
+    
+}
+
+function desestructuracionObjeto2(){
+    const auto = {
+        marca: 'Toyota',
+        modelo: 'Prius',
+        anio: 2020,
+        color: 'Amarillo'
+    }
+    
+    
+}
+
+
