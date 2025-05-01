@@ -302,6 +302,8 @@ const fundamentosJS = (num1,num2) =>{
     console.log(marcaR);
     console.log(restoO);
 
+    // Manejo de Formularios 
+
 
 
 

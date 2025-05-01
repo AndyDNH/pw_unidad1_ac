@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    /* centramos el formulario, centra horizontalmente */
+    justify-content: center;
+    /* central verticalmente los elementos */
+    align-items: center;
+}
+
+body {
+    background: #59abe3;
+}
+
+/* este elemento me permite activar el estilo */
+p:before {
+    content: attr(type);
+    display: block;
+    margin: 3px;
+    font-size: 18px;
+    color: #5a5a5a;
+}
+
+input {
+    width: 270px;
+    border: none;
+    border-bottom: 2px solid #bebed2;
+    background: none;
+
+}
+
+
+input:focus {
+    /* cuando seleccionamos el cuadro de texto hay un borde, con esta 
+    propiedad logramos hacer transparente */
+    outline: none;
+    border-bottom: 3px solid #9898ce;
+}
+
+/* si quier que un estilo se aplique a dos elementos que se aplique algo en comun lo separo con una coma */
+h2,header{
+    margin: 10px 2px;
+    width: 180px;
+    color: #78788C;
+    border-bottom: 3px solid #237db9;
+}
+
+header {
+    font-size: 35px;
+    width: 260px;
+}
+
+.formulario {
+    border-radius: 10px;
+    background: #56a3d6;
+    /* separacion de los elementos de su contenedor  */
+    padding: 30px 25px;
+    /* aplica una sombra */
+    box-shadow: 10px 10px #297196;
+}
+
+button {
+    background: #a7cae1;
+    padding: 5px;
+    font-size: 20px;
+    color: #06558a;
+    border-radius: 10px;
+    margin-top: 20px;
+    align-items: center;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.centra-boton{
+    display: flex;
+    justify-content: center
+}
